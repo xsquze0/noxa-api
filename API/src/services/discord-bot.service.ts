@@ -306,7 +306,7 @@ class DiscordBotService {
             // Generate and insert keys
             for (let i = 0; i < amount; i++) {
                 // Generate a random license key
-                const licenseKey = `waveshield-${licenseType}-${generateUUID()}`
+                const licenseKey = `noxa-anticheat-${licenseType}-${generateUUID()}`
 
                 // Insert into database
                 await db.query(
