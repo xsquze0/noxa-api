@@ -1,8 +1,10 @@
 import dotenv from 'dotenv';
 import path from 'path';
 
-// Load environment variables
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
+// Load environment variables - try specific env file first, then fallback to .env
+const envFile = `.env.${process.env.NODE_ENV}`;
+dotenv.config({ path: envFile });
+dotenv.config(); // fallback to .env
 
 const config = {
   env: process.env.NODE_ENV || 'development',
