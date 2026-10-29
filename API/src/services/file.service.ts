@@ -34,7 +34,7 @@ class FileService {
     }
 
     const basePath = useBeta ? config.files.paths.updaterBeta : config.files.paths.updater;
-    filePath = path.join(basePath, \${fileName}.\${fileExtension});
+    filePath = path.join(basePath, `${fileName}.${fileExtension}`);
 
     try {
       return await fs.readFile(filePath, 'utf-8');
